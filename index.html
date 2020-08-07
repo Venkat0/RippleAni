@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://www.jio.com/en-in/jiophone2 -->
+<html>
+
+<head>
+    <title>RippleAnimation2020</title>
+</head>
+
+<body>
+    <style type="text/css">
+        /* sachin 28 aug sprit*/
+        .circle {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: relative;
+            top: 106px;
+            left: 104px;
+            -webkit-transition: height .25s ease, width .25s ease;
+            transition: height .25s ease, width .25s ease;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background: url(https://www.jio.com/feature-mobile2-sprite.png) -90px -120px #f0a20e;
+        }
+
+        /* sachin 28 aug sprit end*/
+        .circle:before,
+        .circle:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            border: 1px solid #f0a20e;
+        }
+
+        .circle:before {
+            -webkit-animation: ripple 2s linear infinite;
+            animation: ripple 2s linear infinite;
+        }
+
+        .circle:after {
+            -webkit-animation: ripple 2s linear 1s infinite;
+            animation: ripple 2s linear 1s infinite;
+        }
+
+        @-webkit-keyframes ripple {
+            0% {
+                -webkit-transform: scale(1);
+            }
+
+            75% {
+                -webkit-transform: scale(1.75);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.75);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+    <div class="circle"></div>
+</body>
+
+</html>
